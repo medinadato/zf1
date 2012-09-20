@@ -15,7 +15,7 @@ The following is a sample VHOST you might want to consider for your project.
 
 <VirtualHost *:80>
    DocumentRoot "/var/www/zf/public"
-   ServerName zf.local
+   ServerName local.zf
 
    # This should be omitted in the production environment
    SetEnv APPLICATION_ENV development
@@ -28,3 +28,17 @@ The following is a sample VHOST you might want to consider for your project.
    </Directory>
 
 </VirtualHost>
+
+
+Setting Up Your Database
+=====================
+
+Run the file blog.mwb in docs/eer and then grant access to a user zend on blog db.
+e.g. GRANT ALL ON blog.* TO 'zend'@'localhost' IDENTIFIED BY 'zend';
+
+Setting Up Your Git client
+=====================
+
+Run the line below to don't send files that you've changed the the file mode
+
+git config core.filemode false
