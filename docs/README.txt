@@ -42,3 +42,5 @@ Setting Up Your Git client
 Run the line below to don't send files that you've changed the the file mode
 
 git config core.filemode false
+
+git remote set-url origin git@github.com:medinadato/zf1.git
