@@ -1,0 +1,8 @@
+<h1>Posts</h1>
+<a href="/post/create">Adicionar</a>
+<?php foreach($this->posts as $p): ?>
+	<h3><?php echo $p['title']; ?></h3>
+	<p><?php echo nl2br($p['description']); ?></p>
+	<p><a href="/post/update/id/<?php echo $p['id'];?>">Editar</a></p>
+	<p><a href="/post/delete/id/<?php echo $p['id'];?>">Excluir</a></p>
+<?php endforeach; ?>

@@ -1,0 +1,18 @@
+<html>
+<head>
+  	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <title>Blog</title>
+</head>
+<body>
+<?php
+   //mensagens de erro
+   $session = Zend_Registry::get('session');
+   if(isset($session->erro)) {
+	echo "<p> $session->erro </p>";
+	unset($session->erro);
+   }
+  //mostra o conteúdo da página
+  echo $this->layout()->content;
+?>
+</body>
+</html>
